@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
+import LogosTrustBar from "../LogosTrustBar";
 import { Logo } from "../Icons/Icon";
 import { websiteConfig } from "@/app/page";
-import LogosTrustBar from "../LogosTrustBar";
 import { headerLinks } from "../Header";
 
 export default function Footer () {
@@ -19,13 +19,19 @@ export default function Footer () {
                <div className="text-m pd-2 bold-500 full">
                   &copy; {new Date().getFullYear()} Copyright {name}
                </div>
-               <div className="box full pd-05">
-                  <div className="horizontal-convertible gap-10">
+               <div className="box full dfb pd-05">
+                  <div className="horizontal-convertible gap-10" style={{ maxWidth: "400px" }}>
                      <div className="box full dfb column gap-10">
                         <div className="text-s bold-700">{websiteConfig.name}</div>
                         {headerLinks.map((link, index) => (
                            <Link key={index} href={link.href} className="text-xs fit"><div className="text-xs fit visible-link">{link.label}</div></Link>
                         ))}
+                     </div>
+                  </div>
+                  <div className="horizontal-convertible gap-10" style={{ maxWidth: "400px" }}>
+                     <div className="box full dfb column gap-10">
+                        <div className="text-s bold-700">Instagram</div>
+                           <Link href={'https://www.instagram.com/healing_young_hearts/'} className="text-xs fit"><div className="text-xs fit visible-link">@healing_young_hearts</div></Link>
                      </div>
                   </div>
                </div>
