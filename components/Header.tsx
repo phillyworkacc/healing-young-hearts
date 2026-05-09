@@ -15,10 +15,12 @@ type HeaderLink = {
 
 export const headerLinks: HeaderLink[] = [
    { href: "/", label: "Home" },
-   { href: "/about", label: "About Me" },
+   { href: "/about", label: "About" },
    { href: "/services", label: "Services" },
-   { href: "/approach", label: "Approach" },
-   { href: "/belonging", label: "Belonging" },
+   { href: "/events-networks", label: "Events & Networks" },
+   { href: "/resources", label: "Resources" },
+   { href: "/testimonials", label: "Testimonials" },
+   { href: "/contact", label: "Contact" },
 ];
 
 export default function Header () {
@@ -49,7 +51,7 @@ export default function Header () {
                   <div className="box full dfb align-center justify-center gap-20">
                      {headerLinks.map((link, index) => (
                         <Link href={link.href} key={index}>
-                           <div className="text-s hover-to-accent-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
+                           <div className="text-xxs hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
                               {link.label.toUpperCase()}
                            </div>
                         </Link>
@@ -57,7 +59,12 @@ export default function Header () {
                   </div>
                   <div className="box fit dfb align-center justify-end gap-10">
                      <Link href={"/contact"}>
-                        <button className="xs pd-15 pdx-2 whitespace-nowrap">
+                        <button className="xxs pd-15 pdx-2 whitespace-nowrap">
+                           Sign Up
+                        </button>
+                     </Link>
+                     <Link href={"/contact"}>
+                        <button className="xxs pd-15 pdx-2 whitespace-nowrap outline-accent-color">
                            Contact Me
                         </button>
                      </Link>
@@ -92,7 +99,7 @@ export default function Header () {
                            <div className="box full dfb column gap-20">
                               {headerLinks.map((link, index) => (
                                  <Link href={link.href} key={index}>
-                                    <div className="text-ml hover-to-accent-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
+                                    <div className="text-ml hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
                                        {link.label.toUpperCase()}
                                     </div>
                                  </Link>
@@ -100,7 +107,12 @@ export default function Header () {
                            </div>
                            <div className="box fit dfb column pd-2 gap-10">
                               <Link href={"/contact"}>
-                                 <button className="xs pd-15 pdx-2 whitespace-nowrap">
+                                 <button className="xxs pd-15 pdx-2 whitespace-nowrap">
+                                    Sign Up
+                                 </button>
+                              </Link>
+                              <Link href={"/contact"}>
+                                 <button className="xs pd-15 pdx-2 whitespace-nowrap outline-accent-color">
                                     Contact Me
                                  </button>
                               </Link>

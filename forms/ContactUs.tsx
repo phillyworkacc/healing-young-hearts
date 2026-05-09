@@ -11,7 +11,6 @@ import { bookingConsultationFormTemplate, contactFormEmail } from "@/utils/email
 export default function ContactUsForm ({ title }: { title?: string }) {
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
-   const [phoneNumber, setPhoneNumber] = useState("");
    const [message, setMessage] = useState("");
 
    const sendMessageBtn = async (callback: Function) => {
@@ -25,31 +24,29 @@ export default function ContactUsForm ({ title }: { title?: string }) {
          callback();
          return;
       }
-      if (phoneNumber == "") {
-         toast.error("Please enter your phone number");
-         callback();
-         return;
-      }
-      if (!isValidUKMobile(phoneNumber)) {
-         toast.error("Please enter a valid phone number");
-         callback();
-         return;
-      }
+      // if (phoneNumber == "") {
+      //    toast.error("Please enter your phone number");
+      //    callback();
+      //    return;
+      // }
+      // if (!isValidUKMobile(phoneNumber)) {
+      //    toast.error("Please enter a valid phone number");
+      //    callback();
+      //    return;
+      // }
       if (message == "") {
          toast.error("Please enter your message");
          callback();
          return;
       }
       await sendMinwebEmail(
-         "Serenity Mental Health - Contact Form Submission",
-         title
-            ? bookingConsultationFormTemplate(name, email, phoneNumber, message)
-            : contactFormEmail(name, email, phoneNumber, message)
+         "Healing Young Hearts - Contact Form Submission",
+         contactFormEmail(name, email, '', message)
       );
-      toast.success(title ? "Booking Request Sent!" : "Message Sent!")
+      toast.success("Message Sent!")
       setName("");
       setEmail("");
-      setPhoneNumber("");
+      // setPhoneNumber("");
       setMessage("");
       callback();
    }
@@ -84,7 +81,7 @@ export default function ContactUsForm ({ title }: { title?: string }) {
                onChange={e => setEmail(e.target.value)}
             />
          </div>
-         <div className="box full pd-1 dfb column gap-8">
+         {/* <div className="box full pd-1 dfb column gap-8">
             <div className="text-sm full bold-600 text-left">Phone Number *</div>
             <PhoneInput
                placeholder="Your Phone Number"
@@ -92,7 +89,7 @@ export default function ContactUsForm ({ title }: { title?: string }) {
                value={phoneNumber}
                onChange={v => setPhoneNumber(v)}
             />
-         </div>
+         </div> */}
          <div className="box full pd-1 dfb column gap-8">
             <div className="text-sm full bold-600 text-left">Your Enquiry *</div>
             <textarea 

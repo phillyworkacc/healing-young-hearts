@@ -10,7 +10,7 @@ type HeroActions = | {
 } | {
    label: React.ReactNode | string;
    type: 'action';
-   buttonStyle: "green" | "grey" | "outline-black" | "outline-accent-color" | "transparent" | "delete" | "normal";
+   buttonStyle: "green" | "grey" | "outline-black" | "outline-accent-color" | "transparent" | "delete" | "normal" | "secondary-color";
    buttonSize?: "xxs" | "xs" | "s" | "sm" | "m" | "ml" | "l";
    action: () => void;
 }

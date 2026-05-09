@@ -7,11 +7,11 @@ import Spacing from "@/components/Spacing/Spacing";
 import { useRouter } from "next/navigation";
 
 export const websiteConfig = {
-	headerBackgroundColor: "#ffffff",
+	headerBackgroundColor: "#cee1e6",
 	headerTextColor: "#000",
-	accentColor: "#047B6D",
-	heroDescription: "Evidence-led training and consultancy rooted in neuroscience, relationships, and belonging.",
-	formColors: { background: "#67c2b7", color: "#000000" },
+	accentColor: "#749ca5",
+	heroDescription: "Supporting schools, colleges and organisations to strengthen belonging, wellbeing, inclusion and emotionally sustainable practice through training, consultancy, supervision and systems change.",
+	formColors: { background: "#9cd2df", color: "#000000" },
 	email: "",
 	phoneNumber: "",
 	name: "Healing Young Hearts",
@@ -32,7 +32,7 @@ export default function HomePage () {
 		<Header />
 
 		<Hero 
-			name={"Trauma-Informed Practice That Transforms Systems, Not Just Behaviour."}
+			name={"Creating Trauma-Informed, Relational and Emotionally Safe Cultures"}
 			description={websiteConfig.heroDescription} 
 			style="version-2" backgroundOpacity={0.7}
 			actions={[
@@ -44,6 +44,12 @@ export default function HomePage () {
 				},
 				{
 					label: "Explore Services",
+					buttonStyle: "secondary-color",
+					type: "action",
+					action: () => router.push("/about"),
+				},
+				{
+					label: "Join Our Network",
 					buttonStyle: "outline-accent-color",
 					type: "action",
 					action: () => router.push("/about"),
@@ -52,19 +58,66 @@ export default function HomePage () {
 		/>
 
 		<CustomSection 
-			textColor="black" bgColor="accent-color-70"
+			textColor="black" bgColor="white"
 			customSectionConfig={{
 				title: "Introduction", type: "version-1",
 				align: "left"
 			}}
 		>
-			<div className="text-sm full pd-1 mt-1 line-height-17">
-				Healing Young Hearts Ltd supports schools, colleges, and organisations to embed trauma-informed, relational practice that improves behaviour, wellbeing, and learning outcomes. Our work is grounded in neuroscience and aligned with the principles of the Substance Abuse and Mental Health Services Administration (SAMHSA), ensuring a whole-system approach that leads to meaningful, sustainable change.
+			<div className="text-sm full pd-05 line-height-17">
+				I believe healing, growth and learning happen in relationships.
+			</div>
+			<div className="text-sm full pd-05 line-height-17">
+				My work supports schools, colleges and organisations to develop compassionate, evidence-informed and relational approaches that help children, young people and adults feel safe, connected and able to thrive.
+			</div>
+			<div className="text-sm full pd-05 line-height-17">
+				Grounded in neuroscience, belonging and trauma-informed practice, I help organisations move beyond awareness towards meaningful and sustainable implementation.
 			</div>
 			<Spacing />
 		</CustomSection>
 
 		<CustomSection 
+			textColor="black" bgColor="accent-color-30"
+			customSectionConfig={{
+				title: "Key Focus Areas", type: "version-1",
+				align: "left"
+			}}
+		>
+			<div className="text-s full mt-1 line-height-15">Trauma-Informed Practice</div>
+			<div className="text-s full mt-1 line-height-15">Belonging & Inclusion</div>
+			<div className="text-s full mt-1 line-height-15">Staff Wellbeing</div>
+			<div className="text-s full mt-1 line-height-15">Relational Leadership</div>
+			<div className="text-s full mt-1 line-height-15">Mental Health & Emotional Safety</div>
+			<div className="text-s full mt-1 line-height-15">Neurodiversity & Inclusion</div>
+			<div className="text-s full mt-1 line-height-15">Whole-System Change</div>
+			<div className="text-s full mt-1 line-height-15">Reflective Practice & Supervision</div>
+		</CustomSection>
+
+		<CustomSection 
+			textColor="black" bgColor="accent-color-10"
+			customSectionConfig={{
+				title: "Join the Healing Young Hearts Community", type: "version-1",
+				align: "left"
+			}}
+		>
+			<div className="text-sm pd-05 full line-height-15 mb-1">
+				Sign up to receive reflective, evidence-informed insights on trauma-informed practice, belonging, relational leadership, staff wellbeing and emotionally sustainable cultures in education.
+			</div>
+			<div className="text-sm bold-600 full pd-1">I'll occasionally share:</div>
+			<ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
+				<li className='text-sm pd-1' style={{ display: "list-item" }}>Articles and reflections</li>
+				<li className='text-sm pd-1' style={{ display: "list-item" }}>Training and event updates</li>
+				<li className='text-sm pd-1' style={{ display: "list-item" }}>Research-informed insights</li>
+				<li className='text-sm pd-1' style={{ display: "list-item" }}>Recommended resources and reading</li>
+				<li className='text-sm pd-1' style={{ display: "list-item" }}>Professional learning opportunities</li>
+				<li className='text-sm pd-1' style={{ display: "list-item" }}>Updates from Healing Young Hearts</li>
+			</ul>
+			<div className="text-sm pd-05 full bold-600 line-height-15 mt-1">
+				By subscribing, you agree to receive occasional emails from Healing Young Hearts. You can unsubscribe at any time. Please see the Privacy Policy for more information.
+			</div>
+		</CustomSection>
+
+		{/* <CustomSection 
 			textColor="black" bgColor="accent-color-30"
 			customSectionConfig={{
 				title: "Accreditation", type: "version-1",
@@ -74,7 +127,7 @@ export default function HomePage () {
 			<div className="text-sm full pd-1 mt-1 line-height-17">
 				Alongside independent consultancy, I am a licensed trainer with Trauma Informed Schools UK (TISUK), enabling access to nationally recognised training pathways where appropriate.
 			</div>
-		</CustomSection>
+		</CustomSection> */}
 
 		<Footer />
 	</>)
