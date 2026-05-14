@@ -1,7 +1,8 @@
+import { websiteConfig } from "@/app/page";
 import { formatMilliseconds } from "./date";
 
 export function contactFormEmail (name: string, email: string, phone: string, message: string) {
-   return `Hello Shukura,
+   return `Hello Siobhán,
 
 You've received a new message through the Contact Us form on your website.
 
@@ -18,11 +19,11 @@ Submitted on: ${formatMilliseconds(Date.now())}
 
 —
 Website Notification
-Serenity Mental Health`;
+${websiteConfig.name}`;
 }
 
 export function bookingConsultationFormTemplate (name: string, email: string, phone: string, message: string) {
-   return `Hello Shukura,
+   return `Hello Siobhán,
 
 You've received a new free consultation booking request through your website.
 
@@ -38,5 +39,5 @@ Submitted on: ${formatMilliseconds(Date.now())}
 
 —
 Website Notification
-Serenity Mental Health`;
+${websiteConfig.name}`;
 }
