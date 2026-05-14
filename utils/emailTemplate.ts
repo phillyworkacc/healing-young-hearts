@@ -10,7 +10,6 @@ Here are the details:
 
 Name: ${name}
 Email: ${email}
-Phone (if provided): ${phone}
 
 Message:
 ${message}

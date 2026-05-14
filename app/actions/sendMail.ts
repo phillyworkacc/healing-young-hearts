@@ -8,14 +8,14 @@ export async function sendMinwebEmail (subject: string, body: string) {
       host: "smtp.gmail.com",
       port: 465,
       auth: {
-         user: 'serenitymentalhealth89@gmail.com',
+         user: 'siobhangarrett1@gmail.com',
          pass: process.env.GOOGLE_APP_PASSWORD!
       },
    });
 
    await transporter.sendMail({
-      from: `"Serenity Mental Health" <serenitymentalhealth89@gmail.com>`,
-      to: "SHUKURA23@outlook.com",
+      from: `"Healing Young Hearts" <siobhangarrett1@gmail.com>`,
+      to: "siobhangarrett1@gmail.com",
       subject: subject,
       html: body
    });
