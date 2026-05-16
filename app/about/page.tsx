@@ -6,6 +6,7 @@ import ImageSection from '@/components/ImageSection/ImageSection'
 import AboutUsImage from '@/public/assets/hero-section-bg.jpeg'
 import CustomLink from '@/components/Formatting'
 import Spacing from '@/components/Spacing/Spacing'
+import AboutImage from '@/public/images/image4.png'
 
 export default function AboutPage () {
    const customLinkProps = {
@@ -25,7 +26,8 @@ export default function AboutPage () {
       <CustomSection 
          textColor="black" bgColor="#fcfcfc"
          customSectionConfig={{
-            title: "", titleSize: "l", type: "version-1", align: "left"
+            title: "", titleSize: "l", type: "version-2", align: "left",
+            image: AboutImage.src
          }}
       >
          <div className="text-l bold-600 full pd-1">About Healing Young Hearts</div>

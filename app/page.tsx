@@ -3,6 +3,7 @@ import CustomSection from "@/components/CustomSection/CustomSection";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header"
 import Hero from "@/components/Hero/Hero"
+import { CustomImgIcon } from "@/components/Icons/Icon";
 import Spacing from "@/components/Spacing/Spacing";
 import { useRouter } from "next/navigation";
 
@@ -32,7 +33,7 @@ export default function HomePage () {
 		<Header />
 
 		<Hero 
-			name={"Creating Trauma-Informed, Relational and Emotionally Safe Cultures"}
+			name={websiteConfig.name}
 			description={websiteConfig.heroDescription} 
 			style="version-2" backgroundOpacity={0.7}
 			actions={[
@@ -60,8 +61,8 @@ export default function HomePage () {
 		<CustomSection 
 			textColor="black" bgColor="white"
 			customSectionConfig={{
-				title: "Introduction", type: "version-1",
-				align: "left"
+				title: "Introduction", type: "version-2",
+				align: "left", image: "./images/image6.png"
 			}}
 		>
 			<div className="text-sm full pd-05 line-height-17">
