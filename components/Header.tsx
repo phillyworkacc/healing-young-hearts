@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { LogoWithBorder } from "./Icons/Icon"
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { websiteConfig } from "@/app/page";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -10,6 +10,13 @@ import { motion, AnimatePresence } from "framer-motion";
 type HeaderLink = {
    label: string;
    href: string;
+}
+
+type HeaderProps = {
+   dropdown?: {
+      label: string;
+      items: string[];
+   }
 }
 
 
@@ -23,7 +30,53 @@ export const headerLinks: HeaderLink[] = [
    { href: "/contact", label: "Contact" },
 ];
 
-export default function Header () {
+type HeaderDropdownProps = {
+   label: string;
+   dropdownHeaderLinks: HeaderLink[];
+}
+
+function HeaderDropdown ({ label, dropdownHeaderLinks }: HeaderDropdownProps) {
+   const [openList, setOpenList] = useState(false);
+
+   const autoClose = () => {
+      const timeoutClose = setTimeout(() => setOpenList(false), 600);
+      return () => clearTimeout(timeoutClose);
+   }
+
+   return (
+      <AnimatePresence>
+         <div className="header-dropdown">
+            <div 
+               className="text-xxs hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap dfb align-center gap-5"
+               onClick={() => setOpenList(o => !o)}
+            >
+               {label.toUpperCase()} <ChevronDown size={16} />
+            </div>
+            {openList && (
+               <motion.div 
+                  className="header-dropdown-list"
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: [.03,.09,.67,.99] }}
+               >
+                  <div className="box full dfb column gap-15" onMouseLeave={autoClose}>
+                     {dropdownHeaderLinks.map((link, index) => (
+                        <Link href={link.href} key={index}>
+                           <div className="text-xxs hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
+                              {link.label.toUpperCase()}
+                           </div>
+                        </Link>
+                     ))}
+                  </div>
+               </motion.div>
+            )}
+         </div>
+      </AnimatePresence>
+   )
+}
+
+export default function Header ({ dropdown }: HeaderProps) {
    const router = useRouter();
    const [deviceType, setDeviceType] = useState<"mobile" | "desktop">("desktop");
    const [mobileOpenHeaderLinks, setMobileOpenHeaderLinks] = useState(false);
@@ -49,13 +102,27 @@ export default function Header () {
                      <LogoWithBorder size={65} />
                   </div>
                   <div className="box full dfb align-center justify-center gap-20">
-                     {headerLinks.map((link, index) => (
-                        <Link href={link.href} key={index}>
-                           <div className="text-xxs hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
-                              {link.label.toUpperCase()}
-                           </div>
-                        </Link>
-                     ))}
+                     {(dropdown) ? (<>
+                        {headerLinks.filter(hl => !dropdown.items.includes(hl.href)).map((link, index) => (
+                           <Link href={link.href} key={index}>
+                              <div className="text-xxs hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
+                                 {link.label.toUpperCase()}
+                              </div>
+                           </Link>
+                        ))}
+                        <HeaderDropdown
+                           label={dropdown.label}
+                           dropdownHeaderLinks={headerLinks.filter(hl => dropdown.items.includes(hl.href))}
+                        />
+                     </>) : (<>
+                        {headerLinks.map((link, index) => (
+                           <Link href={link.href} key={index}>
+                              <div className="text-xxs hover-to-link-color fit bold-700 cursor-pointer accent-color whitespace-nowrap">
+                                 {link.label.toUpperCase()}
+                              </div>
+                           </Link>
+                        ))}
+                     </>)}
                   </div>
                   <div className="box fit dfb align-center justify-end gap-10">
                      <Link href={"/contact"}>
@@ -78,8 +145,8 @@ export default function Header () {
                      <LogoWithBorder size={50} />
                   </div>
                   <div className="box full dfb align-center justify-end">
-                     <button className="pd-1 pdx-1 outline-black no-shadow" onClick={() => setMobileOpenHeaderLinks(true)}>
-                        <Menu />
+                     <button className="pd-1 pdx-1 outline-black no-shadow transparent" onClick={() => setMobileOpenHeaderLinks(true)}>
+                        <Menu size={28} />
                      </button>
                   </div>
                   <AnimatePresence>

@@ -19,7 +19,7 @@ export default function ContactPage () {
    return (<>
       <Header />
       <CustomSection 
-         textColor="black" bgColor="accent-color-10"
+         textColor="black" bgColor="#ffffff"
          customSectionConfig={{
             title: "Contact".toUpperCase(),
             titleSize: "l", type: "version-1", align: "left"

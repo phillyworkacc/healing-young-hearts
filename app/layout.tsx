@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 import "@/styles/site.css"
 import type { Metadata } from "next";
-import { LatoFont, OutfitFont, KarlaFont, DM_SansFont } from "./fonts";
+import { AvenirFont, DM_SansFont, PoppinsFont } from "./fonts";
 import { ModalProvider } from "@/components/Modal/ModalContext";
 import { Toaster } from "sonner";
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <ModalProvider>
       <html lang="en">
-        <body className={DM_SansFont.className}>
+        <body className={`${PoppinsFont.className} ${AvenirFont.className}`}>
           {children}
           <Toaster richColors position="top-center" />
         </body>

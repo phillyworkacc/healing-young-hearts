@@ -33,7 +33,7 @@ export default function Hero ({ name, description, style, backgroundOpacity, act
                <div className="page-container">
 
                   <div className="box full dfb column gap-10">
-                     <div className="text-xb full bold-800 text-center">{name.toUpperCase()}</div>
+                     <div className="text-xb full bold-900 text-center">{name.toUpperCase()}</div>
                      <div className="text-m full bold-500 text-center">{description}</div>
                      {(actions) && (<div className="box full pd-2 dfb align-center justify-center gap-10 wrap">
                         {actions.map((action, index) => {
@@ -66,7 +66,7 @@ export default function Hero ({ name, description, style, backgroundOpacity, act
                   <div className="horizontal-convertible full gap-10">
 
                      <div className="box full h-full dfb column gap-10">
-                        <div className="text-xb full bold-800">{name.toUpperCase()}</div>
+                        <div className="text-xb full bold-900">{name.toUpperCase()}</div>
                         <div className="text-m full bold-500">{description}</div>
                         {(actions) && (<div className="box full pd-2 dfb align-center gap-10 wrap">
                            {actions.map((action, index) => {

@@ -45,7 +45,7 @@ header.header {
    top: 0;
    left: 0;
    z-index: 2;
-   border: 1px solid #ececec;
+   border: none;
 }
 
 .header-links-mobile {
@@ -55,8 +55,30 @@ header.header {
    width: 80vw;
    height: 100dvh;
    padding: 25px;
-   background-color: #cecece;
+   background-color: #cee1e6;
    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.098);
+}
+
+.header-dropdown {
+   width: fit-content;
+   position: relative;
+}
+
+.header-dropdown .header-dropdown-list {
+   position: absolute;
+   top: 120%;
+   left: 0;
+   padding: 20px 15px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   height: fit-content;
+   max-height: 200px;
+   background-color: white;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.185);
 }
 
 

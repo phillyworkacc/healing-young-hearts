@@ -6,7 +6,7 @@ import ImageSection from '@/components/ImageSection/ImageSection'
 import AboutUsImage from '@/public/assets/hero-section-bg.jpeg'
 import CustomLink from '@/components/Formatting'
 import Spacing from '@/components/Spacing/Spacing'
-import AboutImage from '@/public/images/image4.png'
+import AboutImage from '@/public/about-img.jpeg'
 
 export default function AboutPage () {
    const customLinkProps = {

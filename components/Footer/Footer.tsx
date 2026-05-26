@@ -26,7 +26,7 @@ export default function Footer () {
                <div className="box full dfb pd-05">
                   <div className="horizontal-convertible gap-10" style={{ maxWidth: "400px" }}>
                      <div className="box full dfb column gap-10">
-                        <div className="text-s bold-700">{websiteConfig.name}</div>
+                        <div className="text-sm bold-700">{websiteConfig.name}</div>
                         {headerLinks.map((link, index) => (
                            <Link key={index} href={link.href} className="text-xs fit"><div className="text-xs fit visible-link">{link.label}</div></Link>
                         ))}
@@ -34,7 +34,7 @@ export default function Footer () {
                   </div>
                   <div className="horizontal-convertible gap-10" style={{ maxWidth: "400px" }}>
                      <div className="box full dfb column gap-10">
-                        <div className="text-s bold-700">Terms</div>
+                        <div className="text-sm bold-700">Terms</div>
                         <Link href={'/terms'} className="text-xs fit hover-to-link-color">
                            <div className="text-xs fit visible-link">Terms and Conditions</div>
                         </Link>
@@ -42,7 +42,7 @@ export default function Footer () {
                   </div>
                   <div className="horizontal-convertible gap-10" style={{ maxWidth: "400px" }}>
                      <div className="box full dfb column gap-10">
-                        <div className="text-s bold-700">Social Links</div>
+                        <div className="text-sm bold-700">Social Links</div>
                         <Link href={'https://www.linkedin.com/in/siobh%C3%A1n-garrett-b1b4a51b6/'} className="text-xs fit hover-to-link-color">
                            <div className="text-xs fit visible-link">Siobhán Garrett's LinkedIn</div>
                         </Link>

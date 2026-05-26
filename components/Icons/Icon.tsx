@@ -22,8 +22,8 @@ export function Logo ({ size }: IconProps) {
 
 export function LogoWithBorder ({ size }: IconProps) {
    return (
-      <div className='icon' style={{ width: `${size}px`, height: `${size}px` }}>
-         <img src={"/logo-border.png"} alt="logo" />
+      <div className='icon' style={{ width: `${size * (896/459)}px`, height: `${size}px` }}>
+         <img src={"/logo-horizontal.png"} alt="logo" />
       </div>
    )
 }

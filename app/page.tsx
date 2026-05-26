@@ -12,7 +12,7 @@ export const websiteConfig = {
 	headerTextColor: "#000",
 	accentColor: "#749ca5",
 	heroDescription: "Supporting schools, colleges and organisations to strengthen belonging, wellbeing, inclusion and emotionally sustainable practice through training, consultancy, supervision and systems change.",
-	formColors: { background: "#9cd2df", color: "#000000" },
+	formColors: { background: "#e5bfff", color: "#000000" },
 	email: "",
 	phoneNumber: "",
 	name: "Healing Young Hearts",
@@ -30,12 +30,17 @@ export default function HomePage () {
 	const router = useRouter();
 
 	return (<>
-		<Header />
+		<Header
+			dropdown={{
+				label: "More",
+				items: ["/services", "/events-networks", "/resources", "/testimonials"]
+			}}
+		/>
 
 		<Hero 
 			name={websiteConfig.name}
 			description={websiteConfig.heroDescription} 
-			style="version-2" backgroundOpacity={0.7}
+			style="version-2" backgroundOpacity={0.5}
 			actions={[
 				{
 					label: "Book a Discovery Call",
@@ -62,7 +67,7 @@ export default function HomePage () {
 			textColor="black" bgColor="white"
 			customSectionConfig={{
 				title: "Introduction", type: "version-2",
-				align: "left", image: "./images/image6.png"
+				align: "left", image: "./intro-img.jpeg"
 			}}
 		>
 			<div className="text-sm full pd-05 line-height-17">
