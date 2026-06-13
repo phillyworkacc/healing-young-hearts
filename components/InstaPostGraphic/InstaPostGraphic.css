@@ -1,0 +1,23 @@
+.insta-post-graphic-link {
+   width: fit-content;
+   cursor: pointer;
+}
+
+.insta-post-graphic {
+   width: 100%;
+   max-width: 450px;
+   border-radius: 20px;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--secondary-color);
+}
+
+.insta-post-graphic > img {
+   width: 100%;
+   height: 100%;
+   aspect-ratio: 1;
+   object-fit: cover;
+   object-position: center;
+}

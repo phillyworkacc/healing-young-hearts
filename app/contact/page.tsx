@@ -1,13 +1,11 @@
 'use client'
-import Link from 'next/link'
 import CustomSection from '@/components/CustomSection/CustomSection'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer/Footer'
 import ContactUsForm from '@/forms/ContactUs'
-import { Mail, Phone } from 'lucide-react'
-import { websiteConfig } from '../page'
 import Spacing from '@/components/Spacing/Spacing'
 import CustomLink from '@/components/Formatting'
+import { Phone } from 'lucide-react'
 
 export default function ContactPage () {
    const customLinkProps = {
@@ -19,7 +17,7 @@ export default function ContactPage () {
    return (<>
       <Header />
       <CustomSection 
-         textColor="black" bgColor="#ffffff"
+         textColor="black" bgColor="accent-color-30"
          customSectionConfig={{
             title: "Contact".toUpperCase(),
             titleSize: "l", type: "version-1", align: "left"
@@ -46,7 +44,7 @@ export default function ContactPage () {
                <div className="text-sm pd-05 full line-height-15">
                   You can contact us via Training & Consultancy Enquiries, Speaking Requests, Partnership Opportunities, Network Information, Supervision Enquiries or you can book a call with us below.
                </div>
-               <div className="box full dfb column gap-10">
+               <div className="box full dfb column gap-10 mt-1">
                   <button className="xxs pd-13 full mw-400"><Phone size={17} /> Book a Discovery Call</button>
                </div>
 

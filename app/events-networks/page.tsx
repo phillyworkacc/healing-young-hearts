@@ -3,8 +3,8 @@ import CustomSection from '@/components/CustomSection/CustomSection'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header'
 import ImageSection from '@/components/ImageSection/ImageSection'
-import AboutUsImage from '@/public/assets/hero-section-bg.jpeg'
 import Spacing from '@/components/Spacing/Spacing'
+import { websiteConfig } from '../page'
 
 export default function EventsAndNetworksPage () {
    const customLinkProps = {
@@ -15,14 +15,14 @@ export default function EventsAndNetworksPage () {
 
    return (<>
       <Header />
-      <ImageSection image={AboutUsImage} backgroundOpacity={0.5}>
+      <ImageSection image={websiteConfig.imageSectionsImg} backgroundOpacity={0.5}>
          <div className="box full dfb column gap-10 pd-2">
             <div className="text-xxb full text-left color-white bold-700">Events And Networks</div>
          </div>
       </ImageSection>
 
       <CustomSection 
-         textColor="black" bgColor="#fcfcfc"
+         textColor="black" bgColor="accent-color-20"
          customSectionConfig={{
             title: "", titleSize: "l", type: "version-1", align: "left"
          }}

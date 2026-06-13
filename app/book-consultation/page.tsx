@@ -6,7 +6,7 @@ import ContactUsForm from '@/forms/ContactUs'
 
 export default function BookConsultationPage () {
    return (<>
-      <Header />   
+      <Header />
       <CustomSection
          textColor="black" bgColor="#fefefe"
 			customSectionConfig={{ title: "", type: "version-1", align: "left" }}

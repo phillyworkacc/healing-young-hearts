@@ -20,9 +20,9 @@ section[aria-label="Notifications alt+T"] {
    width: 100vw;
    min-height: 70vh;
    height: fit-content;
-   background-image: url('/assets/hero-section-bg.jpeg');
+   background-image: url('/images/image4.png');
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center 20%;
    background-size: cover;
 }
 
@@ -76,7 +76,7 @@ header.header {
    overflow-y: scroll;
    overflow-x: hidden;
    height: fit-content;
-   max-height: 200px;
+   max-height: 250px;
    background-color: white;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.185);
 }

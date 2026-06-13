@@ -1,22 +1,22 @@
 'use client'
 import Link from "next/link";
-import LogosTrustBar from "../LogosTrustBar";
 import { Logo } from "../Icons/Icon";
 import { websiteConfig } from "@/app/page";
 import { headerLinks } from "../Header";
 import Spacing from "../Spacing/Spacing";
+import StrapLine from "../StrapLine/StrapLine";
 
 export default function Footer () {
    const { accentColor, name } = websiteConfig;
    return (<>
-      <LogosTrustBar />
+      <StrapLine />
       <section 
          className="footer"
          style={{ backgroundColor: `${accentColor}4d`, color: "black" }}
       >
          <div className="page-container">
             <div className="box full dfb column gap-10">
-               <Logo size={60} />
+               <Logo size={80} />
                <Spacing />
                <div className="box full mb-3">
                   <div className="text-xxs bold-500 full mb-1">&copy; {name}. All rights reserved.</div>

@@ -3,14 +3,17 @@ import CustomSection from "@/components/CustomSection/CustomSection";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header"
 import Hero from "@/components/Hero/Hero"
-import { CustomImgIcon } from "@/components/Icons/Icon";
 import Spacing from "@/components/Spacing/Spacing";
+import ImageSectionImage from '@/public/images/image3.png'
+import { UserRoundPlus } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export const websiteConfig = {
 	headerBackgroundColor: "#cee1e6",
 	headerTextColor: "#000",
 	accentColor: "#749ca5",
+	sectionBgColor: "#e6c27b",
+	imageSectionsImg: ImageSectionImage,
 	heroDescription: "Supporting schools, colleges and organisations to strengthen belonging, wellbeing, inclusion and emotionally sustainable practice through training, consultancy, supervision and systems change.",
 	formColors: { background: "#e5bfff", color: "#000000" },
 	email: "",
@@ -30,12 +33,7 @@ export default function HomePage () {
 	const router = useRouter();
 
 	return (<>
-		<Header
-			dropdown={{
-				label: "More",
-				items: ["/services", "/events-networks", "/resources", "/testimonials"]
-			}}
-		/>
+		<Header />
 
 		<Hero 
 			name={websiteConfig.name}
@@ -46,25 +44,25 @@ export default function HomePage () {
 					label: "Book a Discovery Call",
 					buttonStyle: "normal",
 					type: "action",
-					action: () => router.push("/book-consultation"),
+					action: () => router.push("/book-appointment"),
 				},
 				{
 					label: "Explore Services",
 					buttonStyle: "secondary-color",
 					type: "action",
-					action: () => router.push("/about"),
+					action: () => router.push("/services"),
 				},
 				{
 					label: "Join Our Network",
 					buttonStyle: "outline-accent-color",
 					type: "action",
-					action: () => router.push("/about"),
+					action: () => router.push("/join-community"),
 				},
 			]}
 		/>
 
 		<CustomSection 
-			textColor="black" bgColor="white"
+			textColor="black" bgColor="accent-color-30"
 			customSectionConfig={{
 				title: "Introduction", type: "version-2",
 				align: "left", image: "./intro-img.jpeg"
@@ -83,7 +81,7 @@ export default function HomePage () {
 		</CustomSection>
 
 		<CustomSection 
-			textColor="black" bgColor="accent-color-30"
+			textColor="black" bgColor="accent-color-50"
 			customSectionConfig={{
 				title: "Key Focus Areas", type: "version-1",
 				align: "left"
@@ -100,7 +98,7 @@ export default function HomePage () {
 		</CustomSection>
 
 		<CustomSection 
-			textColor="black" bgColor="accent-color-10"
+			textColor="black" bgColor="accent-color-30"
 			customSectionConfig={{
 				title: "Join the Healing Young Hearts Community", type: "version-1",
 				align: "left"
@@ -121,20 +119,10 @@ export default function HomePage () {
 			<div className="text-sm pd-05 full bold-600 line-height-15 mt-1">
 				By subscribing, you agree to receive occasional emails from Healing Young Hearts. You can unsubscribe at any time. Please see the Privacy Policy for more information.
 			</div>
+         <div className="box full dfb column gap-10 mt-1">
+            <button className="xs pd-13 full mw-400" onClick={() => router.push("/join-community")}><UserRoundPlus size={20} /> Join Community</button>
+         </div>
 		</CustomSection>
-
-		{/* <CustomSection 
-			textColor="black" bgColor="accent-color-30"
-			customSectionConfig={{
-				title: "Accreditation", type: "version-1",
-				align: "left"
-			}}
-		>
-			<div className="text-sm full pd-1 mt-1 line-height-17">
-				Alongside independent consultancy, I am a licensed trainer with Trauma Informed Schools UK (TISUK), enabling access to nationally recognised training pathways where appropriate.
-			</div>
-		</CustomSection> */}
-
 		<Footer />
 	</>)
 }

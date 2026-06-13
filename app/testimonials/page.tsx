@@ -3,9 +3,10 @@ import CustomSection from '@/components/CustomSection/CustomSection'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header'
 import ImageSection from '@/components/ImageSection/ImageSection'
-import AboutUsImage from '@/public/assets/hero-section-bg.jpeg'
 import Spacing from '@/components/Spacing/Spacing'
 import CustomLink from '@/components/Formatting'
+import { websiteConfig } from '../page'
+import Testimonial from '@/components/Testimonial/Testimonial'
 
 export default function TestimonialsPage () {
    const customLinkProps = {
@@ -14,16 +15,43 @@ export default function TestimonialsPage () {
       colour: "accent-color" as const,
    }
 
+   const testimonials = [
+      {
+         author: "GM",
+         description: <>
+            I recently attended ACEs training delivered by Siobhán, and I was genuinely impressed by both the content and the way it was delivered.
+
+Siobhán’s pedagogy was thoughtful, engaging, and clearly grounded in a deep understanding of trauma-informed practice. Rather than simply communicating information to us, she invited us into the conversation, creating a learning environment that encouraged reflection, discussion, and meaningful participation throughout.
+
+What stood out most was her ability to approach complex and sensitive themes in a way that felt accessible, supportive, and practically relevant to those working with young people.
+
+I would highly recommend Siobhán to any school, college, or organisation looking to develop trauma-informed understanding and practice.
+         </>
+      },
+      {
+         author: "JD",
+         description: <>
+            Siobhan is an excellent Trauma Informed trainer. An effective communicator who shared her knowledge and understanding with our school and personalised it to our context. Highly recommended.
+         </>
+      },
+      {
+         author: "Anonymous",
+         description: <>
+            Thank you! Your guidance, feedback, and encouragement have genuinely shaped the direction I want to take in my career, and I’m incredibly grateful for your time and expertise.
+         </>
+      }
+   ]
+
    return (<>
       <Header />
-      <ImageSection image={AboutUsImage} backgroundOpacity={0.5}>
+      <ImageSection image={websiteConfig.imageSectionsImg} backgroundOpacity={0.5}>
          <div className="box full dfb column gap-10 pd-2">
             <div className="text-xxb full text-left color-white bold-700">Testimonials</div>
          </div>
       </ImageSection>
 
       <CustomSection 
-         textColor="black" bgColor="#fcfcfc"
+         textColor="black" bgColor="accent-color-20"
          customSectionConfig={{
             title: "", titleSize: "l", type: "version-1", align: "left"
          }}
@@ -35,27 +63,11 @@ export default function TestimonialsPage () {
 
          <Spacing />
 
-         <div className="text-m bold-600 full pd-1">This section will showcase:</div>
-         <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Client testimonials</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Case studies</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Organisational impact</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Leadership reflections</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Training feedback</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Partnership projects</li>
-         </ul>
-
-         <Spacing />
-         
-         <div className="text-m bold-600 full pd-1">Focus areas include:</div>
-         <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Belonging and inclusion</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Staff wellbeing</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Behaviour and regulation</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Trauma-informed implementation</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Relational culture change</li>
-            <li className='text-sm pd-1' style={{ display: "list-item" }}>Emotionally sustainable practice</li>
-         </ul>
+         <div className="box full dfb column gap-10">
+            {testimonials.map((testimonial, index) => (
+               <Testimonial key={index} name={testimonial.author} description={testimonial.description} />
+            ))}
+         </div>
       </CustomSection>
 
       <CustomSection 

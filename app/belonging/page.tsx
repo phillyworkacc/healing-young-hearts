@@ -3,12 +3,12 @@ import CustomSection from '@/components/CustomSection/CustomSection'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header'
 import ImageSection from '@/components/ImageSection/ImageSection'
-import AboutUsImage from '@/public/assets/hero-section-bg.jpeg'
+import { websiteConfig } from '../page'
 
 export default function BelongingPage () {   
    return (<>
       <Header />
-      <ImageSection image={AboutUsImage} backgroundOpacity={0.5}>
+      <ImageSection image={websiteConfig.imageSectionsImg} backgroundOpacity={0.5}>
          <div className="box full dfb column gap-10 pd-2">
             <div className="text-xxb full text-left color-white bold-700">Belonging</div>
          </div>

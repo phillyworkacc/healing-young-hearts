@@ -1,0 +1,41 @@
+.testimonial-card {
+   position: relative;
+   max-width: 100%;
+   padding: 2rem;
+   background: #fff;
+   border: 1px solid rgba(230, 194, 123, 0.25);
+   border-radius: 20px;
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+   transition: all 0.3s ease;
+   overflow: hidden;
+}
+
+.testimonial-card:hover {
+   border-color: #e6c27b;
+   box-shadow: 0 20px 50px rgba(230, 194, 123, 0.15);
+}
+
+.quote-mark {
+   position: absolute;
+   top: 10px;
+   left: 18px;
+   font-size: 5rem;
+   line-height: 1;
+   color: rgba(230, 194, 123, 0.18);
+   font-family: Georgia, serif;
+   pointer-events: none;
+}
+
+.testimonial-rating {
+   color: #e6c27b;
+   font-size: 1.2rem;
+   letter-spacing: 3px;
+}
+
+.testimonial-divider {
+   width: 80px;
+   height: 3px;
+   background: #e6c27b;
+   border-radius: 999px;
+   margin-bottom: 1.5rem;
+}

@@ -3,10 +3,11 @@ import CustomSection from '@/components/CustomSection/CustomSection'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header'
 import ImageSection from '@/components/ImageSection/ImageSection'
-import AboutUsImage from '@/public/assets/hero-section-bg.jpeg'
 import CustomLink from '@/components/Formatting'
 import Spacing from '@/components/Spacing/Spacing'
+import AccreditedLogo from "@/public/tiscuk-logo.jpg"
 import AboutImage from '@/public/about-img.jpeg'
+import { websiteConfig } from '../page'
 
 export default function AboutPage () {
    const customLinkProps = {
@@ -17,14 +18,14 @@ export default function AboutPage () {
 
    return (<>
       <Header />
-      <ImageSection image={AboutUsImage} backgroundOpacity={0.5}>
+      <ImageSection image={websiteConfig.imageSectionsImg} backgroundOpacity={0.5}>
          <div className="box full dfb column gap-10 pd-2">
             <div className="text-xxb full text-left color-white bold-700">About</div>
          </div>
       </ImageSection>
 
       <CustomSection 
-         textColor="black" bgColor="#fcfcfc"
+         textColor="black" bgColor="accent-color-30"
          customSectionConfig={{
             title: "", titleSize: "l", type: "version-2", align: "left",
             image: AboutImage.src
@@ -58,17 +59,24 @@ export default function AboutPage () {
                <CustomLink href='https://sebda.org/' {...customLinkProps}>SEBDA (Social, Emotional and Behavioural Difficulties Association)</CustomLink> — promoting social and emotional wellbeing, inclusion and evidence-informed SEMH practice for children and young people.
             </li>
             <li className='text-sm pd-1' style={{ display: "list-item" }}>
-               UK Trauma Council Community of Practice — engaging with current trauma research, interdisciplinary collaboration and evidence-informed approaches to supporting children and young people affected by trauma.
+               <CustomLink href='https://uktraumacouncil.org/resources/cop' {...customLinkProps}>UK Trauma Council Community of Practice</CustomLink> — engaging with current trauma research, interdisciplinary collaboration and evidence-informed approaches to supporting children and young people affected by trauma.
             </li>
             <li className='text-sm pd-1' style={{ display: "list-item" }}>
                <CustomLink href='https://www.trauma-informed.uk/' {...customLinkProps}>Trauma Informed Schools UK</CustomLink> — supporting schools and organisations to develop trauma-informed and relational approaches.
             </li>
          </ul>
+      </CustomSection>
+      <CustomSection 
+         textColor="black" bgColor="accent-color-30"
+         customSectionConfig={{
+            title: "", titleSize: "l", type: "version-2", align: "left",
+            image: AccreditedLogo.src
+         }}
+      >
          <div className="text-sm pd-1 mt-1 full line-height-15">
             Alongside my consultancy work, I am a Regional Lead and licensed trainer with <CustomLink href='https://www.trauma-informed.uk/' {...customLinkProps}>Trauma Informed Schools UK</CustomLink> and am currently undertaking postgraduate study and research in psychology, trauma and child and adolescent mental health through <CustomLink href='https://www.ucl.ac.uk/' {...customLinkProps}>University College London (UCL)</CustomLink> in partnership with <CustomLink href='https://www.annafreud.org/' {...customLinkProps}>Anna Freud Centre</CustomLink>.
          </div>
       </CustomSection>
-
       <Footer />  
    </>)
 }

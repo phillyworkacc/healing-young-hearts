@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { LogoWithBorder } from "./Icons/Icon"
+import { Logo, LogoWithBorder } from "./Icons/Icon"
 import { ChevronDown, Menu, X } from "lucide-react";
 import { websiteConfig } from "@/app/page";
 import { useRouter } from "next/navigation";
@@ -12,20 +12,13 @@ type HeaderLink = {
    href: string;
 }
 
-type HeaderProps = {
-   dropdown?: {
-      label: string;
-      items: string[];
-   }
-}
-
-
 export const headerLinks: HeaderLink[] = [
    { href: "/", label: "Home" },
    { href: "/about", label: "About" },
    { href: "/services", label: "Services" },
    { href: "/events-networks", label: "Events & Networks" },
    { href: "/resources", label: "Resources" },
+   { href: "/book-consultation", label: "Book Consultation" },
    { href: "/testimonials", label: "Testimonials" },
    { href: "/contact", label: "Contact" },
 ];
@@ -76,7 +69,7 @@ function HeaderDropdown ({ label, dropdownHeaderLinks }: HeaderDropdownProps) {
    )
 }
 
-export default function Header ({ dropdown }: HeaderProps) {
+export default function Header () {
    const router = useRouter();
    const [deviceType, setDeviceType] = useState<"mobile" | "desktop">("desktop");
    const [mobileOpenHeaderLinks, setMobileOpenHeaderLinks] = useState(false);
@@ -89,6 +82,11 @@ export default function Header ({ dropdown }: HeaderProps) {
          setDeviceType((window.innerWidth >= mobileThreshold) ? "desktop" : "mobile");
       })
    }, []);
+
+   const dropdown = {
+      label: "More",
+      items: ["/services", "/book-consultation", "/events-networks", "/resources", "/testimonials"]
+   }
    
    return (
       <header className="header" style={{
@@ -99,7 +97,7 @@ export default function Header ({ dropdown }: HeaderProps) {
             {(deviceType == "desktop") && (<>
                <div className="box full dfb align-center">
                   <div className="box fit h-full dfb align-center cursor-pointer" onClick={() => router.push("/")}>
-                     <LogoWithBorder size={65} />
+                     <Logo size={65} />
                   </div>
                   <div className="box full dfb align-center justify-center gap-20">
                      {(dropdown) ? (<>
@@ -125,7 +123,7 @@ export default function Header ({ dropdown }: HeaderProps) {
                      </>)}
                   </div>
                   <div className="box fit dfb align-center justify-end gap-10">
-                     <Link href={"/contact"}>
+                     <Link href={"/join-community"}>
                         <button className="xxs pd-15 pdx-2 whitespace-nowrap">
                            Sign Up
                         </button>
@@ -173,7 +171,7 @@ export default function Header ({ dropdown }: HeaderProps) {
                               ))}
                            </div>
                            <div className="box fit dfb column pd-2 gap-10">
-                              <Link href={"/contact"}>
+                              <Link href={"/join-community"}>
                                  <button className="xxs pd-15 pdx-2 whitespace-nowrap">
                                     Sign Up
                                  </button>

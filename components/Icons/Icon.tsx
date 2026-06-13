@@ -20,6 +20,14 @@ export function Logo ({ size }: IconProps) {
    )
 }
 
+export function LogoNoBorder ({ size }: IconProps) {
+   return (
+      <div className='icon' style={{ width: `${size}px`, height: `${size}px` }}>
+         <img src={"/logo-no-border.png"} alt="logo" />
+      </div>
+   )
+}
+
 export function LogoWithBorder ({ size }: IconProps) {
    return (
       <div className='icon' style={{ width: `${size * (896/459)}px`, height: `${size}px` }}>
