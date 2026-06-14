@@ -140,7 +140,7 @@ export default function Header () {
             {(deviceType == "mobile") && (<>
                <div className="box full dfb align-center pdx-3">
                   <div className="box fit dfb align-center cursor-pointer" onClick={() => router.push("/")}>
-                     <LogoWithBorder size={50} />
+                     <Logo size={50} />
                   </div>
                   <div className="box full dfb align-center justify-end">
                      <button className="pd-1 pdx-1 outline-black no-shadow transparent" onClick={() => setMobileOpenHeaderLinks(true)}>
