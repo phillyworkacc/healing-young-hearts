@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Healing Young Hearts — website
 
-## Getting Started
+A complete, ready-to-deploy 8-page website matching your design brief
+(teal / orange / purple / sage palette, Poppins + Nunito Sans, organic
+shapes, card-based layouts). Plain HTML/CSS/JS — no build step, no
+framework, nothing to install.
 
-First, run the development server:
+## What's included
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+index.html              Home
+about.html               About
+services.html            Services (Training, Consultancy, Speaker, Systems Change, Supervision)
+testimonials.html        Testimonials & impact
+resources.html           Resources & recommended reading
+events-networks.html     Events & Networks
+book-consultation.html   Book a Consultation
+contact.html             Contact
+assets/styles.css        All styling
+assets/script.js         Mobile nav + form handling
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploying to Vercel (no developer needed)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Option A — drag and drop (easiest)**
+1. Go to vercel.com and log in.
+2. Click "Add New… → Project".
+3. Drag this whole folder onto the upload area.
+4. Click Deploy. You'll have a live URL in under a minute.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Option B — connect your domain**
+Once deployed, go to your Vercel project → Settings → Domains, and add
+your Google domain. Vercel will give you DNS records (usually a single
+A record or CNAME) to add at your domain registrar. This only affects
+web traffic — your Google Workspace email (MX records) is untouched,
+so email keeps working exactly as it does now.
 
-## Learn More
+## Editing copy yourself
 
-To learn more about Next.js, take a look at the following resources:
+Every page is a plain HTML file you can open in any text editor —
+even Notepad or TextEdit will do, though something like VS Code makes
+it easier to see the structure. Text content sits in plain English
+inside the markup, e.g.:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```html
+<h1>Helping adults create the conditions for young hearts to heal and thrive.</h1>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Change the words between the tags, save, and re-deploy (Vercel
+redeploys automatically if connected to GitHub, or you can drag the
+folder in again).
 
-## Deploy on Vercel
+## Known placeholders to swap in later
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Logo**: the header/footer currently use a simple drawn circle
+  motif standing in for your logo. Swap in your real logo file
+  (replace the `brandmark` SVG in each page, or ask whoever builds
+  on this to drop in `logo.png`).
+- **Photography**: real photos are now in place throughout
+  (`assets/images/`), all licensed Pexels stock photos optimised for
+  web. If you'd rather use original photography of your own training
+  sessions and schools later, just swap the `<img src="...">` paths.
+- **Forms**: the contact and booking forms currently open a pre-filled
+  email (no backend required, works immediately). For submissions to
+  land directly in an inbox or CRM, connect a form service such as
+  Formspree or Getform — typically a five-minute change to the `
+  <form>` tag's `action` attribute.
+- **Instagram feed**: the four tiles on the Resources page link out to
+  your Instagram profile but don't pull live posts. An embed service
+  (e.g. SnapWidget, Elfsight) can show real thumbnails if wanted.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+- Built mobile-responsive throughout — tested down to 390px width.
+- Fonts (Poppins, Nunito Sans) load from Google Fonts automatically;
+  no installation needed.
+- Nothing here requires Node, npm, or a build step to view or deploy
+  — these are the actual files a browser reads.

@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "eyebrow": "Trauma-Informed Practice & Systems Change",
+    "title": "Helping adults create the conditions for young hearts to heal and thrive.",
+    "description": "Evidence-informed training, consultancy and support that helps schools and organisations build cultures of safety, connection and belonging."
+  },
+  "stats": [
+    {
+      "value": "20+",
+      "label": "Years' experience"
+    },
+    {
+      "value": "13",
+      "label": "London boroughs reached"
+    },
+    {
+      "value": "UCL",
+      "label": "Postgraduate research"
+    },
+    {
+      "value": "UK & IE",
+      "label": "Nationwide reach"
+    }
+  ],
+  "intro": {
+    "title": "I believe healing, growth and learning happen in relationships.",
+    "paragraph1": "My work supports schools, colleges and organisations to develop compassionate, evidence-informed and relational approaches that help children, young people and adults feel safe, connected and able to thrive.",
+    "paragraph2": "Grounded in neuroscience, belonging and trauma-informed practice, I help organisations move beyond awareness towards meaningful and sustainable implementation."
+  },
+  "focusAreas": [
+    "Trauma-Informed Practice",
+    "Belonging & Inclusion",
+    "Staff Wellbeing",
+    "Relational Leadership",
+    "Mental Health & Emotional Safety",
+    "Neurodiversity & Inclusion",
+    "Whole-System Change",
+    "Reflective Practice & Supervision"
+  ]
+}

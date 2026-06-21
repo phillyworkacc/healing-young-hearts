@@ -1,0 +1,90 @@
+{
+  "intro": {
+    "title": "Training, consultancy & systems change",
+    "description": "I support schools, colleges and organisations to create emotionally safe, relational and trauma-informed cultures where children, young people and adults can thrive."
+  },
+  "quotedParagraph": "I am particularly interested in how systems either strengthen connection and belonging, or unintentionally contribute to social thinning &mdash; where stress, exclusion and repeated negative experiences gradually reduce opportunities for trust, safety and support.",
+  "services": [
+    {
+      "id": "training",
+      "iconKey": "training",
+      "title": "Training",
+      "hook": "I deliver training that participants regularly describe as both deeply reflective and genuinely practical.",
+      "description": "My sessions bring together neuroscience, psychology and trauma-informed practice with strategies that staff can apply in the classroom, the corridor, the pastoral meeting and beyond.",
+      "listLabel": "Areas of training include",
+      "items": [
+        "Trauma-Informed Practice",
+        "Relational Approaches",
+        "Behaviour, Stress & Regulation",
+        "Belonging & Inclusion",
+        "Attachment & Developmental Trauma",
+        "Staff Wellbeing & Secondary Trauma"
+      ]
+    },
+    {
+      "id": "consultancy",
+      "iconKey": "bulb",
+      "title": "Consultancy",
+      "hook": "Real change doesn't come from a report left on a shelf.",
+      "description": "My consultancy work is collaborative and relational — I work alongside leaders and teams to explore culture, relationships, behaviour, belonging and emotional safety across the organisation.",
+      "listLabel": "Consultancy support includes",
+      "items": [
+        "Trauma-Informed Audits & Reviews",
+        "Relational Practice Development",
+        "Behaviour & Culture Review",
+        "Inclusion & Belonging Strategy",
+        "Leadership Reflection & Coaching",
+        "Policy & Strategy Development"
+      ]
+    },
+    {
+      "id": "speaker",
+      "iconKey": "mic",
+      "title": "Speaker",
+      "hook": "My speaking blends research, storytelling and neuroscience.",
+      "description": "I help audiences think differently about behaviour, vulnerability, inclusion and human connection — grounded, emotionally resonant and practically useful.",
+      "listLabel": "Topics I speak on",
+      "items": [
+        "Belonging in education & social buffering",
+        "Relational leadership",
+        "Neurodiversity & emotional wellbeing",
+        "Staff wellbeing & burnout",
+        "Trauma, stress & learning"
+      ]
+    },
+    {
+      "id": "systems change",
+      "iconKey": "systems",
+      "title": "Systems Change",
+      "hook": "Training alone rarely changes a system.",
+      "description": "I support trusts, colleges, local authorities and organisations to embed trauma-informed and relational approaches across whole systems — from governance to classroom.",
+      "listLabel": "System change support includes",
+      "items": [
+        "Whole-System Implementation",
+        "Strategic Leadership Support",
+        "Trust & College Group Development",
+        "Multi-Agency Collaboration",
+        "Evaluation & Impact Planning"
+      ]
+    },
+    {
+      "id": "supervision",
+      "iconKey": "heart",
+      "title": "Supervision",
+      "hook": "Relational work requires relational support.",
+      "description": "Alongside my own work, I collaborate with a trusted network of experienced school-based therapists who offer individual and group supervision tailored to schools, colleges and organisations.",
+      "listLabel": "Supervision offers include",
+      "items": [
+        "Individual Reflective Supervision",
+        "Group Supervision",
+        "Pastoral Team Supervision",
+        "DSL & Safeguarding Supervision",
+        "Trauma-Informed Reflective Practice"
+      ],
+      "extra": {
+        "name": "Leigh Fenton",
+        "description": "Clinical Supervisor, Counsellor and Trainer with over 16 years' experience. Trainer and Clinical Supervisor for TISCUK, holding a PGCert in Clinical Supervision (Derby University) and PGDip in Integrative Counselling (University of Bristol)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+backend:
+  name: github
+  repo: phillworkaccs/healing-young-hearts
+
+media_folder: "assets/images"
+public_folder: "/assets"
+
+publish_mode: editorial_workflow
+
+collections:
+- name: settings
+  label: Site Settings
+  files:
+    - label: Site Settings
+      name: site
+      file: content/site.json
+      fields:
+        - { label: Site Name, name: siteName, widget: string }
+        - { label: Tagline, name: tagline, widget: text }
+        - { label: LinkedIn URL, name: linkedin, widget: string }
+        - { label: Instagram URL, name: instagram, widget: string }
+        - { label: Bookshop URL, name: bookshop, widget: string }
+        - { label: Company Number, name: companyNumber, widget: string }
+        - { label: Registered Office, name: registeredOffice, widget: string }
+        - { label: Email Address, name: email, widget: string }
+
+- name: pages
+  label: Pages
+  files:
+    - label: Homepage
+      name: home
+      file: content/home.json
+      fields:
+
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+
+        - { label: Eyebrow, name: eyebrow, widget: string }
+        - { label: Title, name: title, widget: string }
+        - { label: Description, name: description, widget: text }
+
+      - label: Stats
+        name: stats
+        widget: list
+        fields:
+
+        - { label: Value, name: value, widget: string }
+        - { label: Label, name: label, widget: string }
+
+      - label: Introduction
+        name: intro
+        widget: object
+        fields:
+
+        - { label: Title, name: title, widget: string }
+        - { label: Paragraph 1, name: paragraph1, widget: text }
+        - { label: Paragraph 2, name: paragraph2, widget: text }
+
+      - label: Focus Areas
+        name: focusAreas
+        widget: list
+        field:
+          label: Focus Area
+          name: focusArea
+          widget: string
+
+    - label: About
+      name: about
+      file: content/about.json
+      fields:
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+
+      - label: Biography
+        name: biography
+        widget: object
+        fields:
+          - { label: Paragraph 1, name: paragraph1, widget: text }
+          - { label: Paragraph 2, name: paragraph2, widget: text }
+
+      - { label: Research Quote, name: researchQuote, widget: text }
+
+      - label: Affiliations
+        name: affiliations
+        widget: list
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Description, name: description, widget: text }
+
+    - label: Services
+      name: services
+      file: content/services.json
+      fields:
+
+      - label: Introduction
+        name: intro
+        widget: object
+        fields:
+
+        - { label: Title, name: title, widget: string }
+        - { label: Description, name: description, widget: text }
+
+      - { label: Quoted Paragraph, name: quotedParagraph, widget: text }
+
+      - label: Services
+        name: services
+        widget: list
+        fields:
+        - { label: ID, name: id, widget: string }
+        - { label: Icon Key, name: iconKey, widget: string }
+        - { label: Title, name: title, widget: string }
+        - { label: Hook, name: hook, widget: text }
+        - { label: Description, name: description, widget: text }
+        - { label: List Label, name: listLabel, widget: string }
+
+        - label: Items
+          name: items
+          widget: list
+          field: { label: Item, name: item, widget: string }
+
+      - label: Extra
+        name: extra
+        required: false
+        widget: object
+        fields:
+        - { label: Name, name: name, widget: string, required: false }
+        - { label: Description, name: description, widget: text, required: false }
+
+    - label: Testimonials
+      name: testimonials
+      file: content/testimonials.json
+      fields:
+
+      - label: Testimonials
+        name: testimonials
+        widget: list
+        fields:
+        - { label: Quote, name: quote, widget: text }
+        - { label: Author, name: author, widget: string }
+        - { label: Organisation, name: organisation, widget: string }
+
+      - label: Impact
+        name: impact
+        widget: object
+        fields:
+        - { label: Number, name: number, widget: string }
+        - { label: Title, name: title, widget: string }
+        - { label: Description, name: description, widget: text }
+
+    - label: Resources
+      name: resources
+      file: content/resources.json
+      fields:
+
+      - label: Downloads
+        name: downloads
+        widget: list
+        fields:
+        - { label: Title, name: title, widget: string }
+        - { label: File, name: file, widget: file }
+
+      - { label: Bookshop Link, name: bookshopLink, widget: string }
+
+    - label: Events
+      name: events
+      file: content/events.json
+      fields:
+
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+        - { label: Title, name: title, widget: string }
+        - { label: Description, name: description, widget: text }
+
+      - label: Services
+        name: services
+        widget: list
+        field: { label: Service, name: service, widget: string }
+
+      - label: Discuss Services
+        name: discussServices
+        widget: list
+        field: { label: Service, name: service, widget: string }
+
+    - label: Contact
+      name: contact
+      file: content/contact.json
+      fields:
+
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+        - { label: Title, name: title, widget: string }
+        - { label: Description, name: description, widget: text }
+
+      - label: Audiences
+        name: audiences
+        widget: list
+        field: { label: Audience, name: audience, widget: string }

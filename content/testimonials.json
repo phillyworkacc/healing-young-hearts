@@ -1,0 +1,24 @@
+{
+  "testimonials": [
+    {
+      "quote": "Genuinely impressed by both the content and the way it was delivered. She invited us into the conversation, creating a learning environment that encouraged reflection and discussion throughout.",
+      "author": "Senior Leader",
+      "organisation": "Secondary School"
+    },
+    {
+      "quote": "An excellent Trauma Informed trainer. An effective communicator who shared her knowledge and personalised it to our context. Highly recommended.",
+      "author": "Head of Inclusion",
+      "organisation": "Primary School"
+    },
+    {
+      "quote": "Your guidance, feedback and encouragement have genuinely shaped the direction I want to take in my career, and I'm incredibly grateful for your time and expertise.",
+      "author": "Training participant",
+      "organisation": ""
+    }
+  ],
+  "impact": {
+    "number": "24000+",
+    "title": "London Violence Reduction Unit",
+    "description": "Proud to have contributed to the London Violence Reduction Unit and nurtureuk Nurturing London VRU Programme &mdash; supporting schools across <strong>13 boroughs</strong> to develop nurturing, trauma-informed and relational approaches to inclusion, wellbeing and violence reduction. Later explored in the <em>International Journal of Nurture in Education</em>, in Andrea Middleton's paper on reducing school exclusions through nurture practice."
+  }
+}
