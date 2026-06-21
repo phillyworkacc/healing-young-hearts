@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: phillworkaccs/healing-young-hearts
+  name: git-gateway
+  branch: main
 
 media_folder: "assets/images"
 public_folder: "/assets"
