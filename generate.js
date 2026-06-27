@@ -97,6 +97,7 @@ function footer() {
       <div class="footer-bottom">
         <span>&copy; Healing Young Hearts. Registered in England &amp; Wales (16057232). Registered office: Epping, Essex, CM16 5AG.</span>
         <div class="footer-social">
+          <a href="terms.html">Terms and Conditions</a>
           <a href="https://www.linkedin.com/in/siobh%C3%A1n-garrett-b1b4a51b6/" aria-label="LinkedIn">${icon.linkedin}</a>
           <a href="https://www.instagram.com/healing_young_hearts/" aria-label="Instagram">${icon.instagram}</a>
           <a href="https://uk.bookshop.org/shop/HYH/" aria-label="Bookshop.org">${icon.bookshop}</a>
@@ -678,6 +679,154 @@ const bookBody = `
 `;
 
 /* =========================================================
+   TERMS AND CONDITIONS
+   ========================================================= */
+const termsBody = `
+    <section class="page-hero section-tight">
+      ${heroBlob('b1', 1)}
+      <div class="container">
+        <p class="eyebrow">Healing Young Hearts</p>
+        <h1>Terms and Conditions</h1>
+        <p class="lede">These Terms and Conditions (“Terms”) govern your use of the website operated by Healing Young Hearts (“we”, “us”, or “our”) and the services we provide.</p>
+        <p class="lede">By using our website or engaging our services, you agree to these Terms.</p>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container">
+				<h3>About Us</h3>
+				<p style="margin-top: 0.5rem;">Healing Young Hearts</p>
+				<p>Epping, Essex, CM16 5AG.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Use of Our Website</h3>
+				<p style="margin-top: 0.5rem;">You may use our website for lawful purposes only. You must not:</p>
+				<ul class="list-check">
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Use the website in any way that breaches applicable UK laws or regulations</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Attempt to gain unauthorised access to the website or its systems</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Copy, reproduce, or distribute website content without permission</li>
+				</ul>
+				<p style="margin-top: 0.5rem;">We may suspend or withdraw access to our website at any time without notice.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Services and Quotations</h3>
+				<ul class="list-check">
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Any information provided on our website is for general guidance only</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Quotes or estimates are provided based on the information available at the time</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Final pricing may change if the scope of work changes or unforeseen issues arise</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> All services are subject to availability</li>
+				</ul>
+				<p style="margin-top: 0.5rem;">Unless otherwise agreed in writing, quotes are valid for [e.g. 30 days].</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Appointments and Cancellations</h3>
+				<ul class="list-check">
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Appointment times are estimates and may be affected by factors outside our control</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> If you need to cancel or reschedule, please provide reasonable notice</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> We reserve the right to charge for missed appointments or late cancellations where applicable</li>
+				</ul>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Payment Terms</h3>
+				<ul class="list-check">
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Payment terms will be agreed before work begins</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Payment is due upon completion of services unless otherwise agreed in writing</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Late payments may result in additional charges or suspension of future services</li>
+				</ul>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Customer Responsibilities</h3>
+				<p style="margin-top: 0.5rem;">You agree to:</p>
+				<ul class="list-check">
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Provide accurate information about the property and work required</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Ensure safe and reasonable access to the property</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Inform us of any known hazards, restrictions, or special requirements</li>
+				</ul>
+				<p style="margin-top: 0.5rem;">We are not responsible for delays or issues caused by incomplete or inaccurate information.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Intellectual Property</h3>
+				<p style="margin-top: 0.5rem;">All content on this website, including text, logos, images, and designs, is owned by or licensed to Healing Young Hearts and may not be used without prior written consent.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Limitation of Liability</h3>
+				<p style="margin-top: 0.5rem;">To the fullest extent permitted by UK law:</p>
+				<ul class="list-check">
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> We are not liable for any indirect, incidental, or consequential losses</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> We are not responsible for losses caused by events beyond our reasonable control</li>
+					<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 7.5"/></svg> Nothing in these Terms limits liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded under UK law</li>
+				</ul>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Warranties and Guarantees</h3>
+				<p style="margin-top: 0.5rem;">Any guarantees or warranties provided will be clearly communicated in writing and apply only to the specific services agreed.</p>
+				<p>Statutory consumer rights under UK law are not affected.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Third-Party Links</h3>
+				<p style="margin-top: 0.5rem;">Our website may contain links to third-party websites. We are not responsible for the content, policies, or practices of those websites.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Privacy and Data Protection</h3>
+				<p style="margin-top: 0.5rem;">Your use of our website and services is also governed by our Privacy Policy, which explains how we collect and use personal data in accordance with UK GDPR.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Changes to These Terms</h3>
+				<p style="margin-top: 0.5rem;">We may update these Terms from time to time. Any changes will take effect once published on this page.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Governing Law</h3>
+				<p style="margin-top: 0.5rem;">These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+      </div>
+			
+			<br><br>
+
+      <div class="container">
+				<h3>Contact Us</h3>
+				<p style="margin-top: 0.5rem;">If you have any questions about this Privacy Policy or how we handle your data, please contact:</p>
+      </div>
+    </section>
+
+    ${pillars()}
+`;
+
+/* =========================================================
    CONTACT
    ========================================================= */
 const contactPage = JSON.parse(fs.readFileSync('./content/contact.json', 'utf8'));
@@ -737,6 +886,7 @@ const pages = [
   { slug: 'resources.html', title: 'Resources', description: 'Articles, reading recommendations and resources.', body: resourcesBody },
   { slug: 'events-networks.html', title: 'Events & Networks', description: 'Professional learning, networks and events.', body: eventsBody },
   { slug: 'book-consultation.html', title: 'Book a Consultation', description: 'Book a free consultation with Healing Young Hearts.', body: bookBody },
+  { slug: 'terms.html', title: 'Terms and Conditions', description: 'Terms and Conditions of Healing Young Hearts website.', body: termsBody },
   { slug: 'contact.html', title: 'Contact', description: 'Get in touch with Healing Young Hearts.', body: contactBody },
 ];
 
