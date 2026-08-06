@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const OUT = '/home/claude/site';
+const OUT = './';
 
 /* ---------------- Icons (simple inline SVG, currentColor) ---------------- */
 const icon = {
@@ -86,6 +86,8 @@ function footer() {
           <a href="events-networks.html">Events & Networks</a>
           <a href="contact.html">Contact</a>
           <a href="book-consultation.html">Book a Consultation</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="book-consultation.html">Privacy Policy</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
@@ -164,7 +166,7 @@ const homeBody = `
 
     <section class="stats-strip section-tight">
       <div class="container stats-grid">
-        ${home.stats.map(stat => (`<div><div class="stat-num">${stat.value}</div><div class="stat-label">${stat.label}</div></div>`))}
+        ${home.stats.map(stat => (`<div><div class="stat-num">${stat.value}</div><div class="stat-label">${stat.label}</div></div>`)).join("")}
       </div>
     </section>
 
@@ -187,7 +189,7 @@ const homeBody = `
           <h2>Key focus areas</h2>
         </div>
         <div class="grid grid-4">
-          ${home.focusAreas.map(fa => (`<div class="tile">${fa}</div>`))}
+          ${home.focusAreas.map(fa => (`<div class="tile">${fa}</div>`)).join("")}
         </div>
       </div>
     </section>
@@ -279,7 +281,7 @@ const homeBody = `
           <form
             action="https://trauma-informed.us6.list-manage.com/subscribe/post?u=0f16e3acd46502f6311ed7374&amp;id=0a3bcd2b75&amp;f_id=00bbc2e1f0"
             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank"
-            style="margin-top:1.5rem; max-width:380px; display:flex; gap:0.6rem;"
+            style="margin-top:1.5rem; width:100%; max-width: 380px; display:flex; gap:0.6rem;"
           >
             <input type="hidden" name="FNAME" id="mce-FNAME" required hidden />
             <input type="hidden" name="LNAME" id="mce-LNAME" required hidden />
@@ -323,7 +325,7 @@ const aboutBody = `
           <p>${about.biography.paragraph1}</p>
           <p style="margin-top:1rem;">${about.biography.paragraph2}</p>
         </div>
-        <div><img class="photo portrait" src="assets/images/heart-tattoo-hands.jpg" alt="Close-up of hands reaching out, with a small heart tattoo"></div>
+        <div><img class="photo portrait" src="assets/images/hyh_audience_portrait.jpeg" alt="Close-up of hands reaching out, with a small heart tattoo"></div>
       </div>
     </section>
 
@@ -347,7 +349,7 @@ const aboutBody = `
             <h3 style="font-size:1.05rem;">${affiliation.name}</h3>
             <p>${affiliation.description}</p>
           </div>
-          `))}
+          `)).join("")}
         </div>
       </div>
     </section>
@@ -477,7 +479,7 @@ const testimonialsBody = `
               <p class="quote">"${tes.quote}"</p>
               <p class="author">${tes.author}<span>${tes.organisation}</span></p>
             </div>
-          `))}
+          `)).join("")}
         </div>
       </div>
     </section>
@@ -552,7 +554,7 @@ const resourcesBody = `
               <h3>${downloadCard.title}</h3>
               <a href="${downloadCard.file}" class="card-link" download="true">Download Here →</a>
             </div>
-          `))}
+          `)).join("")}
         </div>
       </div>
     </section>
@@ -609,14 +611,14 @@ const eventsBody = `
             <p class="eyebrow">I offer</p>
             <h2>Professional learning &amp; collaboration</h2>
             <ul class="list-check" style="margin-top:1.25rem;">
-              ${eventsPage.services.map(e => (`<li>${icon.check} ${e}</li>`))}
+              ${eventsPage.services.map(e => (`<li>${icon.check} ${e}</li>`)).join("")}
             </ul>
             <img class="photo" style="margin-top:1.75rem;" src="assets/images/heart-hands-toddler-forest.jpg" alt="A young child forming a heart shape with their hands outdoors">
           </div>
           <div class="card" style="background:var(--neutral-warm-light); box-shadow:none; display:flex; flex-direction:column; justify-content:center;">
             <h3 style="margin-bottom:1rem;">Get in touch to discuss</h3>
             <ul class="list-check">
-              ${eventsPage.discussServices.map(ds => (`<li>${icon.check} ${ds}</li>`))}
+              ${eventsPage.discussServices.map(ds => (`<li>${icon.check} ${ds}</li>`)).join("")}
             </ul>
             <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;">Get in touch</a>
           </div>
@@ -846,7 +848,7 @@ const contactBody = `
           <div>
             <h2 style="margin-bottom:1rem;">I work with</h2>
             <ul class="list-check">
-              ${contactPage.audiences.map(aud => (`<li>${icon.check} ${aud}</li>`))}
+              ${contactPage.audiences.map(aud => (`<li>${icon.check} ${aud}</li>`)).join("")}
             </ul>
             <h3 style="margin-top:2rem; margin-bottom:0.6rem;">Contact options</h3>
             <p>Training &amp; consultancy enquiries, speaking requests, partnership opportunities, network information, supervision enquiries &mdash; or book a call below.</p>
