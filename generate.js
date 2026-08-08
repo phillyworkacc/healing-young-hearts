@@ -645,7 +645,7 @@ const bookBody = `
     <section class="bg-white section-tight">
       <div class="container">
         <div class="grid grid-2" style="gap:3rem; align-items:flex-start;">
-          <form class="form-card" data-mailto="hello@healingyounghearts.co.uk">
+          <form class="form-card" id="book-cons-mw" data-mailto="hello@healingyounghearts.co.uk">
             <div class="field">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required>
@@ -859,7 +859,7 @@ const contactBody = `
               <a href="https://uk.bookshop.org/shop/HYH/" aria-label="Bookshop.org">${icon.bookshop}</a>
             </div>
           </div>
-          <form class="form-card" data-mailto="hello@healingyounghearts.co.uk">
+          <form class="form-card" id="contact-form-mw" data-mailto="hello@healingyounghearts.co.uk">
             <div class="field"><label for="c-name">Name *</label><input type="text" id="c-name" name="name" required></div>
             <div class="field"><label for="c-email">Email *</label><input type="email" id="c-email" name="email" required></div>
             <div class="field"><label for="c-message">Your enquiry *</label><textarea id="c-message" name="message" required></textarea></div>
