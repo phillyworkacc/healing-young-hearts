@@ -2,7 +2,7 @@ const websiteConfig = {
   name: "Healing Young Hearts",
   minwebBusinessId: "f36ea77b788644b08fcd83f6e372da7e",
   formsUrl: "https://app.minwebagency.com/api/forms/custom",
-  emailTo: "siobhan@healingyounghearts.com"
+  emailTo: "siobhangarrett1@gmail.com"
 }
 
 function formatMilliseconds(ms, withoutTime, shortHandMonth) {
